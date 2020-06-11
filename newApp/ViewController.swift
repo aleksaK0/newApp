@@ -47,54 +47,59 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var amountConverted: Double = 0
     
     @IBAction func convertButton(_ sender: UIButton) {
-        let amountDouble: Double? = Double(amountTextField.text!)
-        
-        switch cur_From {
-        case "RUB":
-            switch cur_To {
-                case "USD": amountConverted = amountDouble! * 1
-                case "EUR": amountConverted = amountDouble! * 2
-                case "GBP": amountConverted = amountDouble! * 3
-                case "JPY": amountConverted = amountDouble! * 4
+        let a:Double? = Double(amountTextField.text!)
+
+        if a == nil {resultLabel.text = "Choose currencies and write the amount"}
+        else {
+            let amountDouble: Double? = Double(amountTextField.text!)
+
+            switch cur_From {
+            case "RUB":
+                switch cur_To {
+                    case "USD": amountConverted = amountDouble! * 0.0145559383
+                    case "EUR": amountConverted = amountDouble! * 0.0127964293
+                    case "GBP": amountConverted = amountDouble! * 0.0113840874
+                    case "JPY": amountConverted = amountDouble! * 1.5632118014
+                default: print(1)
+                }
+            case "USD":
+                switch cur_To {
+                    case "RUB": amountConverted = amountDouble! * 68.7004835165
+                    case "EUR": amountConverted = amountDouble! * 0.8791208791
+                    case "GBP": amountConverted = amountDouble! * 0.7820923077
+                    case "JPY": amountConverted = amountDouble! * 107.3934065934
+                default: print(1)
+                }
+            case "EUR":
+                switch cur_To {
+                    case "RUB": amountConverted = amountDouble! * 78.1468
+                    case "USD": amountConverted = amountDouble! * 1.1375
+                    case "GBP": amountConverted = amountDouble! * 0.88963
+                    case "JPY": amountConverted = amountDouble! * 122.16
+                default: print(1)
+                }
+            case "GBP":
+                switch cur_To {
+                    case "RUB": amountConverted = amountDouble! * 87.841911806
+                    case "USD": amountConverted = amountDouble! * 1.2786214494
+                    case "EUR": amountConverted = amountDouble! * 1.1240628126
+                    case "JPY": amountConverted = amountDouble! * 137.3155131909
+                default: print(1)
+                }
+            case "JPY":
+                switch cur_To {
+                    case "RUB": amountConverted = amountDouble! * 0.6397085789
+                    case "USD": amountConverted = amountDouble! * 0.0093115586
+                    case "EUR": amountConverted = amountDouble! * 0.0081859856
+                    case "GBP": amountConverted = amountDouble! * 0.0072824984
+                default: print(1)
+            }
             default: print(1)
             }
-        case "USD":
-            switch cur_To {
-                case "RUB": amountConverted = amountDouble! * 1
-                case "EUR": amountConverted = amountDouble! * 2
-                case "GBP": amountConverted = amountDouble! * 3
-                case "JPY": amountConverted = amountDouble! * 4
-            default: print(1)
-            }
-        case "EUR":
-            switch cur_To {
-                case "RUB": amountConverted = amountDouble! * 1
-                case "USD": amountConverted = amountDouble! * 2
-                case "GBP": amountConverted = amountDouble! * 3
-                case "JPY": amountConverted = amountDouble! * 4
-            default: print(1)
-            }
-        case "GBP":
-            switch cur_To {
-                case "RUB": amountConverted = amountDouble! * 1
-                case "USD": amountConverted = amountDouble! * 2
-                case "EUR": amountConverted = amountDouble! * 3
-                case "JPY": amountConverted = amountDouble! * 4
-            default: print(1)
-            }
-        case "JPY":
-            switch cur_To {
-                case "RUB": amountConverted = amountDouble! * 1
-                case "USD": amountConverted = amountDouble! * 2
-                case "EUR": amountConverted = amountDouble! * 3
-                case "GBP": amountConverted = amountDouble! * 4
-            default: print(1)
+
+            let amountConvertedStr = String(amountConverted)
+            resultLabel.text = amountConvertedStr
         }
-        default: print(1)
-        }
-        
-        let amountConvertedStr = String(amountConverted)
-        resultLabel.text = amountConvertedStr
     }
 
     
@@ -123,10 +128,4 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             return currencies[selectedCurFrom].curTo[row]
         }
     }
-    
-    
-
-    
-    
 }
-

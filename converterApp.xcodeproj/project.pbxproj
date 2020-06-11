@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8859A61D2490C74B00DC6993 /* newApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8859A61D2490C74B00DC6993 /* ConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8859A6202490C74B00DC6993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8859A6222490C74B00DC6993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8859A6242490C74B00DC6993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8859A61E2490C74B00DC6993 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8859A61D2490C74B00DC6993 /* newApp.app */,
+				8859A61D2490C74B00DC6993 /* ConverterApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = newApp;
 			productName = newApp;
-			productReference = 8859A61D2490C74B00DC6993 /* newApp.app */;
+			productReference = 8859A61D2490C74B00DC6993 /* ConverterApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8859A6182490C74B00DC6993 /* Build configuration list for PBXProject "newApp" */;
+			buildConfigurationList = 8859A6182490C74B00DC6993 /* Build configuration list for PBXProject "converterApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -293,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aleksa.newApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConverterApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aleksa.newApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConverterApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8859A6182490C74B00DC6993 /* Build configuration list for PBXProject "newApp" */ = {
+		8859A6182490C74B00DC6993 /* Build configuration list for PBXProject "converterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8859A62F2490C75000DC6993 /* Debug */,
